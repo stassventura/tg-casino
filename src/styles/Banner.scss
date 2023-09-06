@@ -1,0 +1,188 @@
+section {
+    margin-top: 20px !important;
+    .banner-container {
+        max-width: 1200px;
+        padding: 0 25px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+
+        .our-choice{
+            background-image: url('https://whale-tg-cdn-04.b-cdn.net/whales_choice.png');
+        }
+        .games-avaliable{
+            background: #28293f;
+        }
+        .play-earn{
+            background: #28293f;
+        }
+        .game-of-week{
+            background: #fd7d48;
+            background-image: url('https://whale-tg-cdn-04.b-cdn.net/game_of_the_week_bg_4.jpg');
+        }
+        .banner-item{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex: 1;
+            min-height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            font-family: 'Jost', sans-serif;
+            display: flex;
+            align-items: center;
+            position: relative;
+            img{
+                width: 100%;
+                height: 200px;
+            }
+            &:nth-child(2){
+                @media screen and (max-width: 1024px) {
+                    display: none !important;
+                }
+            }
+            &:nth-child(3){
+                @media screen and (max-width: 768px) {
+                    display: none !important;
+                }
+            }
+            .banner-content-choice{
+                padding: 15px;
+                width: fit-content;
+                @media screen and (max-width: 768px) {
+                    padding: 0 5%;
+                }
+                .title{
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    user-select: none;
+                    text-transform: uppercase;
+
+                }
+                .btn-play{
+                    margin-top: 15px;
+                    width: 130px;
+                    background: #FFF;
+                    border: none;
+                    padding: 12px;
+                    border-radius: 10px;
+                    color: #5b89ff;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: 0.3s ease background;
+                    &:active{
+                        background: #e6e6e6;
+
+                    }
+                }
+                .game{
+                    max-width: 200px;
+                    width: 45%;
+                    height: 60%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: #505ae6;
+                    right: 15px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    user-select: none;
+                    @media screen and (max-width: 768px) {
+                        height: 80%;
+                    }
+                    @media screen and (max-width: 400px) {
+                        width: 40%;
+                        height: 60%;
+                    }
+                    @media screen and (max-width: 360px) {
+                        width: 40%;
+                        height: 50%;
+                    }
+                    @media screen and (max-width: 340px) {
+                        width: 35%;
+                        height: 45%;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .banner-content-game-of-week{
+                padding: 15px;
+                width: fit-content;
+                @media screen and (max-width: 768px) {
+                    padding: 0 5%;
+                }
+                .title{
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    user-select: none;
+                    text-transform: uppercase;
+                }
+                .btn-play{
+                    margin-top: 15px;
+                    width: 130px;
+                    background: #FFF;
+                    border: none;
+                    padding: 12px;
+                    border-radius: 10px;
+                    color: #ff5b40;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: 0.3s ease background;
+                    &:active{
+                        background: #e6e6e6;
+
+                    }
+                }
+
+                .game{
+                    display: block;
+                    max-width: 200px;
+                    width: 45%;
+                    height: 60%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: rgb(163, 74, 35);
+                    right: 15px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    user-select: none;
+                    @media screen and (max-width: 768px) {
+                        height: 80%;
+                    }
+                    @media screen and (max-width: 400px) {
+                        width: 40%;
+                        height: 60%;
+                    }
+                    @media screen and (max-width: 360px) {
+                        width: 40%;
+                        height: 50%;
+                    }
+                    @media screen and (max-width: 340px) {
+                        width: 35%;
+                        height: 45%;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+  }

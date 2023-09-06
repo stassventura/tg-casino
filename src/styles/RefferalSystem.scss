@@ -1,0 +1,148 @@
+.refferal-system{
+    .container{
+        max-width: 1200px;
+        padding: 0 25px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(40, 41, 63);
+        .earn-banner{
+            width: 100%;
+            height: fit-content;
+            height: 200px;
+            img{
+                display: block;
+                width: 100%;
+                max-width: 450px;
+                margin: 0 auto;
+                height: 200px;
+                object-fit: contain;
+            }
+        }
+        .warning{
+            padding: 10px;
+            border: 2px solid rgb(40, 41, 63);
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            text-transform: none;
+            .icon{
+                margin-right: 20px;
+                svg{
+                    width: 20px;
+                }
+            }
+        }
+
+        .referral-link-block{
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid rgb(40, 41, 63);
+            border-radius: 6px;
+            .title{
+                font-size: 21px;
+                font-weight: 500;
+            }
+            .description{
+                margin-top: 20px;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: none;
+            }
+            .link{
+                text-transform: none;
+                background-color: #28293f;
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 14px;
+                color: #4656c4;
+                margin: 20px 0;
+            }
+            .actions{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                button{
+                    background: #28293f;
+                    width: 45%;
+                    color: #4656c4;
+                    font-size: 16px;
+                    font-weight: 700;
+                    padding: 18px 0;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: 0.3s ease background;
+                    &:active{
+                        background: #1f2031;
+                    }
+                }
+            }
+        }
+
+        .statystic-block{
+            margin: 20px 0;
+            width: 100%;
+            .title{
+                margin-bottom: 10px;
+            }
+            .tabs-list{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                .tab-item{
+                    text-align: center;
+                    background-color: #28293f;
+                    width: 34%;
+                    font-size: 12px;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: none;
+                    border-radius: 5px;
+                    font-weight: 500;
+                    color: #4656c4;
+                    transition: 0.3s ease background, 0.3s ease color;
+                    cursor: pointer;
+                }
+                .--active-tab{
+                    background: #4558db;
+                    color: #FFF;
+                }
+            }
+
+            .tabs-body{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                .tab-body-item{
+                    padding: 10px;
+                    background-color: #28293f;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-transform: none;
+                    .count{
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        font-size: 18px;
+                        img{
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

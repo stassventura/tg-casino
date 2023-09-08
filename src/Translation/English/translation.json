@@ -48,6 +48,8 @@
     "statistic": "STATISTICS",
     "copied": "Copied",
     "your-earnings": "Your income",
-    "total-amount-of-bets": "Total amount of bets"
-
+    "total-amount-of-bets": "Total amount of bets",
+    "buy-crypto": "Buy Crypto",
+    "dep-error": "Minimum amount 1 TON"
+    
 }

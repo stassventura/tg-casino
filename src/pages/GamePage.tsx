@@ -20,12 +20,15 @@ function GamePage() {
             if(isUser && user){
               console.log(user)
               if(user.balance === 0){
-
+                navigate('/profile/deposit')
                 setTimeout(() => {
-
-                  navigate('/profile/deposit')
                   dispatch(setLoadingFalse())
                 }, 1000);
+              } else{
+                navigate('/')
+                setTimeout(() => {
+                  dispatch(setLoadingFalse())
+                }, 5000);
               }
             }
         }

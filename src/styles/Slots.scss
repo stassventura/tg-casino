@@ -213,8 +213,6 @@ section{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    // top: -40px;
-    // top: -20px;
     top: 0;
     height: 100vh;
     z-index: 100;
@@ -314,7 +312,7 @@ section{
                 img{
                     width: 108px !important;
                     height: 112px !important;
-                    object-fit: cover; /* Принудительно масштабирует изображение */
+                    object-fit: cover; 
 
                 }
     
@@ -363,9 +361,7 @@ section{
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     padding-bottom: 30px;
-    // @media screen and(max-width: 390px) {
-    //     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    // }
+  
     @media screen and (max-width: 390px) {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
@@ -373,7 +369,6 @@ section{
         border-radius: 12px;
         overflow: hidden;
         position: relative;
-        // width: 160px;
         height: 112px;
         background: #28293f;
         cursor: pointer;

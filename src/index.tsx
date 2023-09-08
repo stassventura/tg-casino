@@ -6,6 +6,7 @@ import './styles/Banner.scss';
 import './styles/Slots.scss';
 import './styles/Profile.scss';
 import './styles/RefferalSystem.scss';
+import './styles/Deposit.scss';
 import App from './App';
 import { Provider } from 'react-redux/es/exports'
 import { store } from './redux/store';

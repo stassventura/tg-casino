@@ -1,62 +1,63 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux';
 import { setUser, setUserTrue, setLoadingFalse } from '../../redux/slices/UserSlice';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import langList from "../../db/langList.json"
+import axios from 'axios';
+
 declare const window: any;
 
-const testUser = {
-    id: '45893954389',
-    balance: 0.00,
-    avatar: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
-    lang: "en",
-    name: "Robert",
-} 
+// const user = {
+//     id: '45893954389',
+//     balance: 0.00,
+//     avatar: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+//     lang: "en",
+//     name: "Robert",
+// } 
+
 const SessionHandler = () => {
+  const [userDetails, setUserDetails] = useState([])
   const dispatch = useDispatch()
-  let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
-
   useEffect(() => {
-     if(tg){
-      const lang = tg.initDataUnsafe.user.language_code;
-      const id = tg.initDataUnsafe.user.id;
-      const balance = 0.00;
-      const avatar = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50";
-      const name = tg.initDataUnsafe.user.first_name
+   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
 
-      if(langList.includes(lang.toLowerCase())){
-        const user = {
-          id: id,
-          balance: balance,
-          avatar: avatar,
-          lang: lang,
-          name: name
+   if(tg?.initDataUnsafe?.user){
+    const lang = tg.initDataUnsafe.user.language_code;
+    const id = tg.initDataUnsafe.user.id.toString();
+    const name = tg.initDataUnsafe.user.first_name;
+    const defaultAvatar = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50";
+
+    if(id){
+      axios.post(`${process.env.REACT_APP_SERVER_URL}/items`, {user_id: id.toString()}).then((res)=>{
+        console.log(res.data)
+        const data = res.data;
+        let user ={
+          id,
+          balance: data.balance,
+          avatar: data.image === 'None' ? defaultAvatar : data.image,
+          lang: lang === 'en' || lang === 'ru' ? lang : 'en',
+          name: name,
         }
-        dispatch(setUser(user))
-        i18n
-        .use(initReactI18next) 
-        .init({
-          lng: lang,
-        });
-      }else{
-        const user = {
-          id: tg.initDataUnsafe.user.id,
-          balance: 0,
-          avatar: avatar,
-          lang: "en",
-          name: tg.initDataUnsafe.user.first_name,
-        }
-        dispatch(setUser(user))
-      }
-        dispatch(setUserTrue())
-        setTimeout(() => {
-            dispatch(setLoadingFalse())
-            
-        }, 1000);
+            dispatch(setUser(user));
+            if (lang !== "en") {
+                i18n.use(initReactI18next).init({
+                    lng: lang,
+                });
+            }
+            dispatch(setUserTrue());
+            setTimeout(() => {
+                dispatch(setLoadingFalse());
+            }, 1000);
+        
+      })
+      // dispatch(setLoadingFalse());
      }
-  
+   }
+   
   }, [dispatch])
+  
+
   
   return (null)
 }

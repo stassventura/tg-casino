@@ -48,7 +48,9 @@
     "statistic": "СТАТИСТИКА",
     "copied": "Скопировано",
     "your-earnings": "Ваш заработок",
-    "total-amount-of-bets": "Общая сумма ставок"
+    "total-amount-of-bets": "Общая сумма ставок",
+    "buy-crypto": "Купить",
+    "dep-error": "Минимальная сумма 1 TON"
 
 
 }

@@ -66,7 +66,7 @@ const ReferralSystemPage = () => {
             <div className="description">
             {t('earn-percent')}
             </div>
-            <div className="link">
+            <div className="link" onClick={copyToClipboard}>
                 whale.io/?start={user.id}
             </div>
             <div className="actions">

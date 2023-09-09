@@ -42,7 +42,6 @@ const Deposit = () => {
   const amountHandler = (e: any) => {
     const inputedValue = e.target.value;
 
-    // Запрещаем ввод отрицательных чисел
     if (inputedValue.startsWith('-')) return;
 
     if (inputedValue.length <= 5) {
@@ -111,10 +110,10 @@ const Deposit = () => {
       <OutsideClickHandler onOutsideClick={()=>setIsPopupOpen(false)}>
                 <div className="select-currency-popup">
                   <div className="title">
-                    Выберите вашу предпочтительную валюту
+                    {t('preferred-currency')}
                   </div>
                   <p className='right-secured'>
-                    Все права защищены
+                    {t('rights-reserved')}
                   </p>
 
                   <button className="currency-method selected-currency" onClick={()=>setIsPopupOpen(false)}>
@@ -122,7 +121,7 @@ const Deposit = () => {
                     <img src="https://seeklogo.com/images/T/toncoin-ton-logo-DBE22B2DFB-seeklogo.com.png" alt="ton" />
                     </div>
                     <div className="currency">
-                      <span className='name'>Тонкойн</span>
+                      <span className='name'>Toncoin</span>
                       <span className='symbol'>TON</span>
                     </div>
                     <div className="amount">{isUser && user.balance} TON</div>

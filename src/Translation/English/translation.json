@@ -50,6 +50,8 @@
     "your-earnings": "Your income",
     "total-amount-of-bets": "Total amount of bets",
     "buy-crypto": "Buy Crypto",
-    "dep-error": "Minimum amount 1 TON"
+    "dep-error": "Minimum amount 1 TON",
+    "preferred-currency": "Select your preferred currency",
+    "rights-reserved": "All rights reserved"
     
 }

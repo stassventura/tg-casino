@@ -50,7 +50,9 @@
     "your-earnings": "Ваш заработок",
     "total-amount-of-bets": "Общая сумма ставок",
     "buy-crypto": "Купить",
-    "dep-error": "Минимальная сумма 1 TON"
+    "dep-error": "Минимальная сумма 1 TON",
+    "preferred-currency": "Выберите вашу предпочтительную валюту",
+    "rights-reserved": "Все права защищены"
 
 
 }

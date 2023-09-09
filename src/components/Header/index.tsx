@@ -29,12 +29,15 @@ const Header = () => {
               </button>
             )} 
             {isUser ? (
-             <div className="balance">
-             <div className="currency">
-                 <img src="https://seeklogo.com/images/T/toncoin-ton-logo-DBE22B2DFB-seeklogo.com.png" alt="" />
+               <Link to={'/profile/deposit'}>
+                <div className="balance">
+                <div className="currency">
+                    <img src="https://seeklogo.com/images/T/toncoin-ton-logo-DBE22B2DFB-seeklogo.com.png" alt="" />
+                </div>
+                <div className="amount">{user.balance.toFixed(2)}</div>
              </div>
-            <div className="amount">{user.balance.toFixed(2)}</div>
-             </div>
+             </Link>
+            
             ) : (
               <button className="login-btn">{t('login')}</button>
             )} 

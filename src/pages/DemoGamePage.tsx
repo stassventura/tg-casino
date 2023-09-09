@@ -118,12 +118,7 @@ function DemoGamePage() {
             {game && (
                 <>
                     <div className="back-to-main-from-demo">
-                        <div className="container">
-                        <button className='back-btn' onClick={()=>navigate(-1)}>
-                            <svg className="mx-auto h-2" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1L1 5L6 9" stroke="#58638c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
-                            <span>{t('back')}</span>
-                        </button>
-                        </div>
+                       
                         <div className="disclaimer">
                             {t('demo-version')} 
                         </div>

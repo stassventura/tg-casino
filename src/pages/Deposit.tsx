@@ -137,7 +137,7 @@ const Deposit = () => {
                     <div className="amount">0.00 $</div>
                     <div className="terms-conditions">
                       <img src="/images/settings.png" alt=" terms" />
-                      <span>Условия и положения</span>
+                      <span>{t('terms-of-position')}</span>
                     </div>
                   </button>
                   <button className="currency-method">
@@ -151,7 +151,7 @@ const Deposit = () => {
                     <div className="amount">0.00 ETH</div>
                     <div className="terms-conditions">
                       <img src="/images/settings.png" alt=" terms" />
-                      <span>Условия и положения</span>
+                      <span>{t('terms-of-position')}</span>
                     </div>
                   </button>
                 </div>
